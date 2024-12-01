@@ -37,6 +37,6 @@ jobs:
 
 # Finally Deploy on surge:          
       - name: Deploy on surge
-        run: surge ./build --domain bashir-react-app.surge.sh --token ${{secrets.SURGE_TOKEN}}
+        run: surge ./build --domain react-basic-npx.surge.sh --token ${{secrets.SURGE_TOKEN}}
       
       
