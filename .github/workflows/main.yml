@@ -1,33 +1,32 @@
-name: React Basic App and Deploy
-
+name: React Deploy
 on:
-   push:
-      branches: [master]
-   pull_request:
-      branches: [master]
-  
+	push:
+ 		branches: [master]
+   	pull_request:
+    		branches: [master]   
+
 jobs:
-   build:				
-      runs-on: ubuntu-latest	
-   
-	steps:
-	- uses: actions/checkout@v2
+  build:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
 
-  - name: Install NodeJS
-  uses: actions/setup-node@v2-beta
-    with: 
-      node-version: 12
+      - name: Set Node.js 16.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
 
-  - name: Install Surge
-    run: npm install –glabal surge
-        
-  - uses:  borales/actions-yarn@2.0.0
-    with:
-      cmd: install
-      
-  - name: Basic React App
-    run: yarn build
+      - name: Run install
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: install # will run `yarn install` command
 
-      
-  - name: Deploy to Surge
-    run: surge ./build react-basic-npx.surge.sh --token ${{secrets.SURGE_TOKEN}}
+      - name: Creating Build
+	run: yarn build
+ 
+      - name: Install Surge
+	run: npm install –glabal surge
+ 
+      - name: Deploy to Surge
+	run: surge ./build react-basic-npx.surge.sh --token ${{secrets.SURGE_TOKEN}}
