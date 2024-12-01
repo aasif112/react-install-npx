@@ -20,7 +20,7 @@ function App() {
           <br />
           <a
           className="App-link"
-          href=""
+          href="https://github.com/aasif112/react-install-npx.git"
           target="_blank"
           >
           github repo:
