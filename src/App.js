@@ -7,16 +7,26 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Build by: <code>npx create-react-app project-name</code> command.
         </p>
-        <a
+        <p>Deployed on surge.sh: &emsp;
+          <a 
           className="App-link"
-          href="https://reactjs.org"
+          target='_blank' 
+          href="https://react-basic-npx.surge.sh/"
+          >
+            react-basic-npx.surge.sh
+            </a> 
+          <br />
+          <a
+          className="App-link"
+          href=""
           target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+          >
+          github repo:
+          </a>
+        </p>
+       
       </header>
     </div>
   );
