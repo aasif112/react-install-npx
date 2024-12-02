@@ -16,7 +16,9 @@ function App() {
           >
             react-basic-npx.surge.sh
             </a> 
+          </p>
           <br />
+          <p>
           <a
        
           href="https://github.com/aasif112/react-install-npx.git"
@@ -24,12 +26,11 @@ function App() {
           >
           github repo:
           </a>
+          </p>
+         
           <br />
           
-        </p>
-       
-
-    </div>
+     </div>
   );
 }
 
