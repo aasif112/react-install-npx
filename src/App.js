@@ -10,8 +10,9 @@ function App() {
         <p>Deployed on surge.sh: &emsp;
           <a 
        
-          target='_blank' 
           href="https://react-basic-npx.surge.sh/"
+          target='_blank'
+          rel="noreferrer" 
           >
             react-basic-npx.surge.sh
             </a> 
@@ -22,6 +23,7 @@ function App() {
        
           href="https://github.com/aasif112/react-install-npx.git"
           target="_blank"
+          rel="noreferrer"
           >
           github repo:
           </a>
